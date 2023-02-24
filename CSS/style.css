@@ -1,0 +1,138 @@
+* {
+  font-family: "Cairo", sans-serif;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html,body{
+    overflow-x: hidden;
+    height: 300vh;
+}
+.restLink:visited,.restLink:active,.restLink:any-link,.restLink:focus{
+    color: #fff;
+    text-decoration: none;
+}
+  /* start scrol bar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #000000; 
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(92, 92, 92); 
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 255, 255); 
+    border-radius: 5px;
+  }
+  /* end scrol bar */
+/* start Header */
+.Header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+    z-index: 1000;
+}
+.con-link .LinK{
+    font-size: 1.5rem;
+    margin: 20px;
+    padding: 3px;
+    font-weight: 400;
+    position: relative;
+}
+.LinK::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+margin: 0 auto;
+    background-color: #00f7ff;
+    height: 2px;
+    width: 0%;
+    transition: width 1s ease-in;
+    }
+.LinK::after{
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+margin: 0 auto;
+background-color: #fff;
+height: 2px;
+width: 0%;
+transition: width 1s ease-out;
+}
+.LinK:hover::after,.LinK:hover::before{
+    width: 100%;
+}
+.con-tele{
+    padding: 0 5px;
+}
+.icon-tele{
+    color: #fff;
+    margin: 5px;
+    font-size: .8rem;
+}
+
+/* End Header */
+/* Start Home */
+.HOME{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-image: url(../IMAGE/Home.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.con-defin{
+    position: absolute;
+    top: 30%;
+    margin-left: 15%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+.con-defin .row{
+    margin: 1rem 0;
+}
+.full-name{
+    margin: 0PX;
+    font-weight: 400;
+    font-size: 4rem;
+}
+.last-name{
+    display: block;
+    font-weight: 900;
+    font-size: 8rem;
+}
+.para{
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+.goto{
+    margin: 10px;
+    padding: 5px 20px;
+    border-radius: 25px;
+    border: solid #fff 2px;
+}
