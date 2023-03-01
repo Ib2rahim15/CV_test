@@ -1,48 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CV</title>
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/normalize.css">
-    <link rel="stylesheet" href="CSS/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-</head>
-<body>
-
-    <!-- start Home -->
-    <section class="HOME" id="HOME">
-            <!-- start Header -->
-    <header class="Header">
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/normalize.css" />
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="JS/main.js" defer></script>
+  </head>
+  <body>
+    <div class="landing">
+      <!-- start Header -->
+      <header class="Header" id="Header">
         <nav class="con-link">
-            <a href="#HOME" class="LinK restLink">Home</a>
-            <a href="#ABOUT" class="LinK restLink">About</a>
-            <a href="#RESUME" class="LinK restLink">Resume</a>
-            <a href="#PORTFOLIO" class="LinK restLink">Portfolio</a>
+          <a href="#HOME" class="LinK restLink">Home</a>
+          <a href="#ABOUT" class="LinK restLink">About</a>
+          <a href="#RESUME" class="LinK restLink">Resume</a>
+          <a href="#PORTFOLIO" class="LinK restLink">Portfolio</a>
         </nav>
         <div class="con-tele">
-            <i class="fa fa-phone icon-tele" aria-hidden="true"></i>
-            <a href="tel:+201200745702" class="tele restLink">01200745702</a>
+          <i class="fa fa-phone icon-tele" aria-hidden="true"></i>
+          <a href="tel:+201092314022" class="tele restLink">01092314022</a>
         </div>
-    </header>
-    <!-- End Header -->
+      </header>
+      <!-- End Header -->
+      <!-- start Home -->
+      <section class="HOME" id="HOME">
         <div class="con-defin">
-            <div class="row">
-                <h1 class="full-name">Raafat
-                    <span class="last-name">Sami</span>
-                </h1>
-                <p class="para">Web Developer</p>
-            </div>
-            <div class="row con-goto">
-                <a href="#RESUME" class="goto restLink">Resume</a>
-                <a href="#PORTFOLIO" class="goto restLink">Portfolio</a>
-            </div>
+          <div class="row">
+            <h1 class="full-name">
+              Raafat
+              <span class="last-name">Sami</span>
+            </h1>
+            <p class="para">Web Developer</p>
+          </div>
+          <div class="row con-goto">
+            <a href="#RESUME" class="goto restLink">Resume</a>
+            <a href="#PORTFOLIO" class="goto restLink">Portfolio</a>
+          </div>
         </div>
+        <div class="con-link-bottom">
+          <nav class="social-link">
+            <a
+              href="#"
+              class="fa-brands fa-facebook restLink"
+              aria-hidden="true"
+            ></a>
+            <a
+              href="#"
+              class="fa-brands fa-instagram restLink"
+              aria-hidden="true"
+            ></a>
+            <a
+              href="#"
+              class="fa-brands fa-twitter restLink"
+              aria-hidden="true"
+            ></a>
+            <a
+              href="#"
+              class="fa-brands fa-snapchat-ghost restLink"
+              aria-hidden="true"
+            ></a>
+          </nav>
+          <i class="fa fa-arrows-alt bottom-icon" aria-hidden="true"></i>
+        </div>
+      </section>
+      <!-- End Home -->
+    </div>
+    <!-- start About -->
+    <section id="ABOUT" class="About">
+      <article class="left">
+        <div class="head-highlight">
+          <span class="title">ABOUT</span>
+          <a href="mailto:10raafat2sami20@gmail.com" class="email restLink"
+            >10raafat2sami20@gmail.com</a
+          >
+        </div>
+        <p class="para-about">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid
+          rerum cupiditate, consectetur atque maxime ex, eos non corrupti fugit
+          quis voluptatibus, facere vitae sit unde quod? Eveniet, reiciendis
+          molestias. Quos. Lorem ipsum dolor sit, amet consectetur adipisicing
+          elit. Eos, exercitationem impedit. Cum sunt illum incidunt excepturi
+          praesentium recusandae harum laboriosam exercitationem alias quas!
+          Voluptatibus maxime ipsam commodi reiciendis officiis veniam.
+        </p>
+        <span class="addres"
+          ><a href="" class="restLink addres-link">Egypt Cairo</a></span
+        >
+      </article>
+      <article class="right">
+        <img src="/IMAGE/model.png" alt="" class="model" />
+      </article>
     </section>
-    <!-- End Home -->
-</body>
+    <!-- end about -->
+    <!-- start Resume -->
+    <section class="Resume" id="RESUME">
+            <article class="parent-group">
+                <span class="head-resume">LANGUAGES PROGRAMING</span>
+                <div class="group-items">
+                    <div class="item">
+                        <img class="icon-item" src="/IMAGE/C++.png"></img>
+                        <label for="" class="label-item">C++</label>
+                        <div class="progser-line">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img class="icon-item" src="/IMAGE/html.png"></img>
+                        <label for="" class="label-item">html</label>
+                        <div class="progser-line">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img class="icon-item" src="/IMAGE/css.png"></img>
+                        <label for="" class="label-item">css</label>
+                        <div class="progser-line">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img class="icon-item" src="/IMAGE/js.png"></img>
+                        <label for="" class="label-item">JS</label>
+                        <div class="progser-line">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img class="icon-item" src="/IMAGE/java.png"></img>
+                        <label for="" class="label-item">java</label>
+                        <div class="progser-line">
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="parent-group">
+                <span class="head-resume">LANGUAGES </span>
+                <div class="group-items">
+                    <div class="item item-languagh">
+                      <img class="icon-item" src="/IMAGE/C++.png"></img>
+                        <label for="" class="label-item">ENGLISH</label>
+                        <div class="progser-line">
+                        </div>
+                    </div>
+                    <div class="item">
+                      <img class="icon-item" src="/IMAGE/C++.png"></img>
+                        <label for="" class="label-item">ARBIC</label>
+                        <div class="progser-line">
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="parent-group">
+                <span class="head-resume">Personal skills</span>
+                <div class="group-items Personal">
+                    <div class="item">
+                      <label for="" class="label-item">Team work</label>
+                    </div>
+                    <div class="item">
+                      <label for="" class="label-item">social network</label>
+                    </div>
+                    <div class="item">
+                      <label for="" class="label-item">communction skills</label>
+                    </div>
+                </div>
+            </article>
+          <article class="parent-group">
+            <span class="head-resume">Experiance</span>
+            <div class="group-items Experiance">
+                <div class="item">
+                    <label for="" class="label-item">C++</label>
+                    <label for="" class="label-item range">2years</label>
+                </div>
+                <div class="item">
+                  <label for="" class="label-item">Css</label>
+                  <label for="" class="label-item range">1years</label>
+              </div>
+              <div class="item">
+                <label for="" class="label-item">html</label>
+                <label for="" class="label-item range">2years</label>
+            </div>
+            <div class="item">
+              <label for="" class="label-item">ls</label>
+              <label for="" class="label-item range">1years</label>
+          </div>
+            </div>
+        </article>
+        <article class="parent-group">
+          <span class="head-resume">Eduction</span>
+          <div class="group-items Experiance">
+              <div class="item">
+                  <label for="" class="label-item">CS</label>
+                  <label for="" class="label-item range">teba acdemay</label>
+              </div>
+      </article>
+    </section>
+  </body>
 </html>

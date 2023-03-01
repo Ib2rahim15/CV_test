@@ -7,132 +7,357 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-html,body{
-    overflow-x: hidden;
-    height: 300vh;
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
-.restLink:visited,.restLink:active,.restLink:any-link,.restLink:focus{
-    color: #fff;
-    text-decoration: none;
+.restLink:visited,
+.restLink:active,
+.restLink:any-link,
+.restLink:focus {
+  color: #fff;
+  text-decoration: none;
 }
-  /* start scrol bar */
+.active {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  background: linear-gradient(black, transparent);
+  margin: 0rem;
+  height: 3rem;
+}
+/* start scrol bar */
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
-  }
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #000000; 
-  }
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(92, 92, 92); 
-  }
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(255, 255, 255); 
-    border-radius: 5px;
-  }
-  /* end scrol bar */
+  width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(92, 92, 92);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+/* end scrol bar */
 /* start Header */
-.Header{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 25px;
-    position: sticky;
-    top: 0;
-    background-color: transparent;
-    z-index: 1000;
+
+.Header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
 }
-.con-link .LinK{
-    font-size: 1.5rem;
-    margin: 20px;
-    padding: 3px;
-    font-weight: 400;
-    position: relative;
+.con-link .LinK {
+  font-size: 1.5rem;
+  margin: 20px;
+  padding: 3px;
+  font-weight: 400;
+  position: relative;
 }
-.LinK::before{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-margin: 0 auto;
-    background-color: #00f7ff;
-    height: 2px;
-    width: 0%;
-    transition: width 1s ease-in;
-    }
-.LinK::after{
-content: "";
-position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
-margin: 0 auto;
-background-color: #fff;
-height: 2px;
-width: 0%;
-transition: width 1s ease-out;
+.LinK::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: #00f7ff;
+  height: 2px;
+  width: 0%;
+  transition: width 1s ease-in;
 }
-.LinK:hover::after,.LinK:hover::before{
-    width: 100%;
+.LinK::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: #fff;
+  height: 2px;
+  width: 0%;
+  transition: width 1s ease-out;
 }
-.con-tele{
-    padding: 0 5px;
+.LinK:hover::after,
+.LinK:hover::before {
+  width: 100%;
 }
-.icon-tele{
-    color: #fff;
-    margin: 5px;
-    font-size: .8rem;
+.con-tele {
+  padding: 0 5px;
+}
+.icon-tele {
+  color: #fff;
+  margin: 5px;
+  font-size: 0.8rem;
 }
 
 /* End Header */
 /* Start Home */
-.HOME{
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    background-image: url(../IMAGE/Home.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.landing {
+  background-image: url(../IMAGE/Home.jpg);
 }
-.con-defin{
-    position: absolute;
-    top: 30%;
-    margin-left: 15%;
-    color: #fff;
+.HOME {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: saturate(0.6);
+}
+.con-defin {
+  position: absolute;
+  top: 30%;
+  margin-left: 15%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-start;
+}
+.con-defin .row {
+  margin: 1rem 0;
+}
+.full-name {
+  margin: 0px;
+  font-weight: 400;
+  font-size: 4rem;
+}
+.last-name {
+  display: block;
+  font-weight: 900;
+  font-size: 8rem;
+}
+.para {
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+.goto {
+  margin: 10px;
+  padding: 5px 20px;
+  border-radius: 25px;
+  border: solid #fff 2px;
+}
+.con-link-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 10%;
+  padding: 10px 0 55px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: end;
+  gap: 80%;
+  font-size: 1.5rem;
+  color: #fff;
+}
+/* End Home */
+/* start about */
+.About {
+  background-color: rgb(7 7 7);
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 4rem;
+  color: #fff;
+}
+.model {
+  max-height: 90vh;
+}
+.left{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: center;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.head-highlight {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: flex-start;
 }
-.con-defin .row{
-    margin: 1rem 0;
+.title {
+  font-weight: 900;
+  font-size: 3rem;
+  position: relative;
+  border-bottom: 2px solid #ffffff7c;
+  padding: 0 0 2px 0;
+  text-decoration: none;
+  margin: 1rem 0;
 }
-.full-name{
-    margin: 0PX;
-    font-weight: 400;
-    font-size: 4rem;
+.title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #00f7ff;
+  transition: width 0.5s ease-out;
 }
-.last-name{
-    display: block;
+.title:hover::after {
+    width: 100%;
+}
+.para-about{
+    max-width: 50%;
+}
+.addres{
+margin: 0 auto;
+position: relative;
+}
+.addres::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -10%;
+    margin:auto ;
+    background-color: #00f7ff;
+    height: 2px;
+    width: 25%;
+    transition: width 0.5s ease-out;
+}
+.addres:hover::after{
+    width: 0%;
+}
+.addres::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -10%;
+    margin:auto ;
+    background-color: #00f7ff;
+    height: 2px;
+    width: 0%;
+    transition: width 0.5s ease-in;
+}
+.addres:hover::before{
+    width: 25%;
+}
+.addres-link{
+    font-size: 2rem;
     font-weight: 900;
-    font-size: 8rem;
 }
-.para{
-    font-size: 2.5rem;
-    font-weight: 200;
+/* end about */
+/* strat resume */
+.Resume{
+  display: flex;
+  background-image: url(/IMAGE/abstract_01-wallpaper-1920x1080.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: #fff;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
-.goto{
-    margin: 10px;
-    padding: 5px 20px;
-    border-radius: 25px;
-    border: solid #fff 2px;
+.head-resume{
+font-size: 1.2rem;
+font-weight: 800;
+margin-left: 10%;
+position: relative;
+padding: 5px 0;
+}
+.head-resume::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #00f7ff;
+}
+.group-items{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+}
+.item{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5px 0;
+}
+.icon-item{
+    max-width: 10%;
+}
+.progser-line{
+    width: 60%;
+    height: 2px;
+    background-color: #fff;
+    position: relative;
+}
+.progser-line::after{
+content: "";
+position: absolute;
+top: 0;
+bottom: 0;
+margin: auto;
+left: 80%;
+border-radius: 50%;
+width: 10px;
+height: 10px;
+background-color: #00f7ff;
+}
+.progser-line::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 79%;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #fff;
+    }
+.item-languagh{
+    
+}
+.Personal{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px 25px;
+}
+.Experiance{
+  gap: 10px;
+  padding: 10px 25px;
+}
+.Experiance label{
+  font-size: 2rem;
+  font-weight: 900;
+  padding: 10px;
+}
+.range{
+  font-size: 1.1rem !important;
+  color: #00f7ff;
 }
